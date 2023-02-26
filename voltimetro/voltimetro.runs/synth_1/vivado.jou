@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Feb 26 15:45:39 2023
+# Process ID: 1924
+# Current directory: C:/Users/1hgue/OneDrive/Escritorio/ITCH/8vo Semestre/Sistemas con FPGA y Soc/VeriLog/func_transfer/voltimetro/voltimetro.runs/synth_1
+# Command line: vivado.exe -log Top_Level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Level.tcl
+# Log file: C:/Users/1hgue/OneDrive/Escritorio/ITCH/8vo Semestre/Sistemas con FPGA y Soc/VeriLog/func_transfer/voltimetro/voltimetro.runs/synth_1/Top_Level.vds
+# Journal file: C:/Users/1hgue/OneDrive/Escritorio/ITCH/8vo Semestre/Sistemas con FPGA y Soc/VeriLog/func_transfer/voltimetro/voltimetro.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top_Level.tcl -notrace

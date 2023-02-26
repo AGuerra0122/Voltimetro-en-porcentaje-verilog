@@ -1,0 +1,1492 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Feb 26 15:47:13 2023
+| Host         : Adrian-Laptop running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file Top_Level_timing_summary_routed.rpt -pb Top_Level_timing_summary_routed.pb -rpx Top_Level_timing_summary_routed.rpx -warn_on_violation
+| Design       : Top_Level
+| Device       : 7z007s-clg400
+| Speed File   : -1  PRODUCTION 1.11 2016-07-27
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 6 register/latch pins with no clock driven by root clock pin: Instancia_DivisorDeFrecuencia100Hz/clk100hz_reg/Q (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 6 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 8 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      3.398        0.000                      0                   65        0.489        0.000                      0                   65        3.500        0.000                       0                    35  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)         Period(ns)      Frequency(MHz)
+-----        ------------         ----------      --------------
+sys_clk_pin  {0.000 4.000}        8.000           125.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin         3.398        0.000                      0                   65        0.489        0.000                      0                   65        3.500        0.000                       0                    35  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack        3.398ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.489ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             3.398ns  (required time - arrival time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[1]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.398ns  (logic 2.098ns (47.705%)  route 2.300ns (52.295%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.920ns = ( 12.920 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.373ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.739     5.373    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.478     5.851 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/Q
+                         net (fo=2, routed)           0.964     6.816    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]
+    SLICE_X41Y59         LUT2 (Prop_lut2_I1_O)        0.301     7.117 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.117    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7_n_0
+    SLICE_X41Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.667 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.667    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_n_0
+    SLICE_X41Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.781 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.781    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0_n_0
+    SLICE_X41Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.895 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.895    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1_n_0
+    SLICE_X41Y62         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     8.123 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2/CO[2]
+                         net (fo=34, routed)          0.521     8.644    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2_n_1
+    SLICE_X42Y61         LUT2 (Prop_lut2_I1_O)        0.313     8.957 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1/O
+                         net (fo=32, routed)          0.815     9.771    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1_n_0
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     8.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     9.387 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           1.880    11.267    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.358 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.562    12.920    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[1]/C
+                         clock pessimism              0.454    13.373    
+                         clock uncertainty           -0.035    13.338    
+    SLICE_X42Y57         FDCE (Setup_fdce_C_CE)      -0.169    13.169    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[1]
+  -------------------------------------------------------------------
+                         required time                         13.169    
+                         arrival time                          -9.771    
+  -------------------------------------------------------------------
+                         slack                                  3.398    
+
+Slack (MET) :             3.398ns  (required time - arrival time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[2]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.398ns  (logic 2.098ns (47.705%)  route 2.300ns (52.295%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.920ns = ( 12.920 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.373ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.739     5.373    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.478     5.851 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/Q
+                         net (fo=2, routed)           0.964     6.816    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]
+    SLICE_X41Y59         LUT2 (Prop_lut2_I1_O)        0.301     7.117 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.117    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7_n_0
+    SLICE_X41Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.667 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.667    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_n_0
+    SLICE_X41Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.781 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.781    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0_n_0
+    SLICE_X41Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.895 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.895    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1_n_0
+    SLICE_X41Y62         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     8.123 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2/CO[2]
+                         net (fo=34, routed)          0.521     8.644    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2_n_1
+    SLICE_X42Y61         LUT2 (Prop_lut2_I1_O)        0.313     8.957 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1/O
+                         net (fo=32, routed)          0.815     9.771    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1_n_0
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     8.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     9.387 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           1.880    11.267    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.358 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.562    12.920    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[2]/C
+                         clock pessimism              0.454    13.373    
+                         clock uncertainty           -0.035    13.338    
+    SLICE_X42Y57         FDCE (Setup_fdce_C_CE)      -0.169    13.169    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[2]
+  -------------------------------------------------------------------
+                         required time                         13.169    
+                         arrival time                          -9.771    
+  -------------------------------------------------------------------
+                         slack                                  3.398    
+
+Slack (MET) :             3.398ns  (required time - arrival time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.398ns  (logic 2.098ns (47.705%)  route 2.300ns (52.295%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.920ns = ( 12.920 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.373ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.739     5.373    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.478     5.851 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/Q
+                         net (fo=2, routed)           0.964     6.816    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]
+    SLICE_X41Y59         LUT2 (Prop_lut2_I1_O)        0.301     7.117 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.117    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7_n_0
+    SLICE_X41Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.667 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.667    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_n_0
+    SLICE_X41Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.781 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.781    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0_n_0
+    SLICE_X41Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.895 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.895    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1_n_0
+    SLICE_X41Y62         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     8.123 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2/CO[2]
+                         net (fo=34, routed)          0.521     8.644    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2_n_1
+    SLICE_X42Y61         LUT2 (Prop_lut2_I1_O)        0.313     8.957 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1/O
+                         net (fo=32, routed)          0.815     9.771    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1_n_0
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     8.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     9.387 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           1.880    11.267    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.358 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.562    12.920    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/C
+                         clock pessimism              0.454    13.373    
+                         clock uncertainty           -0.035    13.338    
+    SLICE_X42Y57         FDCE (Setup_fdce_C_CE)      -0.169    13.169    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]
+  -------------------------------------------------------------------
+                         required time                         13.169    
+                         arrival time                          -9.771    
+  -------------------------------------------------------------------
+                         slack                                  3.398    
+
+Slack (MET) :             3.398ns  (required time - arrival time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.398ns  (logic 2.098ns (47.705%)  route 2.300ns (52.295%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.920ns = ( 12.920 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.373ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.739     5.373    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.478     5.851 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/Q
+                         net (fo=2, routed)           0.964     6.816    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]
+    SLICE_X41Y59         LUT2 (Prop_lut2_I1_O)        0.301     7.117 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.117    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7_n_0
+    SLICE_X41Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.667 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.667    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_n_0
+    SLICE_X41Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.781 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.781    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0_n_0
+    SLICE_X41Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.895 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.895    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1_n_0
+    SLICE_X41Y62         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     8.123 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2/CO[2]
+                         net (fo=34, routed)          0.521     8.644    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2_n_1
+    SLICE_X42Y61         LUT2 (Prop_lut2_I1_O)        0.313     8.957 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1/O
+                         net (fo=32, routed)          0.815     9.771    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1_n_0
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     8.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     9.387 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           1.880    11.267    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.358 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.562    12.920    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                         clock pessimism              0.454    13.373    
+                         clock uncertainty           -0.035    13.338    
+    SLICE_X42Y57         FDCE (Setup_fdce_C_CE)      -0.169    13.169    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]
+  -------------------------------------------------------------------
+                         required time                         13.169    
+                         arrival time                          -9.771    
+  -------------------------------------------------------------------
+                         slack                                  3.398    
+
+Slack (MET) :             3.513ns  (required time - arrival time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[5]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.258ns  (logic 2.098ns (49.272%)  route 2.160ns (50.728%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.920ns = ( 12.920 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.373ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.739     5.373    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.478     5.851 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/Q
+                         net (fo=2, routed)           0.964     6.816    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]
+    SLICE_X41Y59         LUT2 (Prop_lut2_I1_O)        0.301     7.117 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.117    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7_n_0
+    SLICE_X41Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.667 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.667    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_n_0
+    SLICE_X41Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.781 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.781    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0_n_0
+    SLICE_X41Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.895 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.895    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1_n_0
+    SLICE_X41Y62         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     8.123 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2/CO[2]
+                         net (fo=34, routed)          0.521     8.644    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2_n_1
+    SLICE_X42Y61         LUT2 (Prop_lut2_I1_O)        0.313     8.957 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1/O
+                         net (fo=32, routed)          0.675     9.631    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1_n_0
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     8.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     9.387 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           1.880    11.267    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.358 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.562    12.920    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[5]/C
+                         clock pessimism              0.429    13.348    
+                         clock uncertainty           -0.035    13.313    
+    SLICE_X42Y58         FDCE (Setup_fdce_C_CE)      -0.169    13.144    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[5]
+  -------------------------------------------------------------------
+                         required time                         13.144    
+                         arrival time                          -9.631    
+  -------------------------------------------------------------------
+                         slack                                  3.513    
+
+Slack (MET) :             3.513ns  (required time - arrival time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[6]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.258ns  (logic 2.098ns (49.272%)  route 2.160ns (50.728%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.920ns = ( 12.920 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.373ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.739     5.373    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.478     5.851 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/Q
+                         net (fo=2, routed)           0.964     6.816    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]
+    SLICE_X41Y59         LUT2 (Prop_lut2_I1_O)        0.301     7.117 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.117    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7_n_0
+    SLICE_X41Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.667 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.667    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_n_0
+    SLICE_X41Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.781 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.781    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0_n_0
+    SLICE_X41Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.895 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.895    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1_n_0
+    SLICE_X41Y62         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     8.123 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2/CO[2]
+                         net (fo=34, routed)          0.521     8.644    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2_n_1
+    SLICE_X42Y61         LUT2 (Prop_lut2_I1_O)        0.313     8.957 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1/O
+                         net (fo=32, routed)          0.675     9.631    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1_n_0
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     8.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     9.387 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           1.880    11.267    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.358 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.562    12.920    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[6]/C
+                         clock pessimism              0.429    13.348    
+                         clock uncertainty           -0.035    13.313    
+    SLICE_X42Y58         FDCE (Setup_fdce_C_CE)      -0.169    13.144    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[6]
+  -------------------------------------------------------------------
+                         required time                         13.144    
+                         arrival time                          -9.631    
+  -------------------------------------------------------------------
+                         slack                                  3.513    
+
+Slack (MET) :             3.513ns  (required time - arrival time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.258ns  (logic 2.098ns (49.272%)  route 2.160ns (50.728%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.920ns = ( 12.920 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.373ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.739     5.373    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.478     5.851 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/Q
+                         net (fo=2, routed)           0.964     6.816    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]
+    SLICE_X41Y59         LUT2 (Prop_lut2_I1_O)        0.301     7.117 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.117    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7_n_0
+    SLICE_X41Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.667 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.667    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_n_0
+    SLICE_X41Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.781 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.781    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0_n_0
+    SLICE_X41Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.895 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.895    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1_n_0
+    SLICE_X41Y62         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     8.123 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2/CO[2]
+                         net (fo=34, routed)          0.521     8.644    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2_n_1
+    SLICE_X42Y61         LUT2 (Prop_lut2_I1_O)        0.313     8.957 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1/O
+                         net (fo=32, routed)          0.675     9.631    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1_n_0
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     8.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     9.387 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           1.880    11.267    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.358 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.562    12.920    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]/C
+                         clock pessimism              0.429    13.348    
+                         clock uncertainty           -0.035    13.313    
+    SLICE_X42Y58         FDCE (Setup_fdce_C_CE)      -0.169    13.144    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]
+  -------------------------------------------------------------------
+                         required time                         13.144    
+                         arrival time                          -9.631    
+  -------------------------------------------------------------------
+                         slack                                  3.513    
+
+Slack (MET) :             3.513ns  (required time - arrival time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[8]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.258ns  (logic 2.098ns (49.272%)  route 2.160ns (50.728%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.920ns = ( 12.920 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.373ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.739     5.373    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.478     5.851 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/Q
+                         net (fo=2, routed)           0.964     6.816    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]
+    SLICE_X41Y59         LUT2 (Prop_lut2_I1_O)        0.301     7.117 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.117    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7_n_0
+    SLICE_X41Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.667 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.667    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_n_0
+    SLICE_X41Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.781 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.781    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0_n_0
+    SLICE_X41Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.895 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.895    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1_n_0
+    SLICE_X41Y62         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     8.123 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2/CO[2]
+                         net (fo=34, routed)          0.521     8.644    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2_n_1
+    SLICE_X42Y61         LUT2 (Prop_lut2_I1_O)        0.313     8.957 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1/O
+                         net (fo=32, routed)          0.675     9.631    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[31]_i_1_n_0
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[8]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     8.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     9.387 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           1.880    11.267    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.358 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.562    12.920    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[8]/C
+                         clock pessimism              0.429    13.348    
+                         clock uncertainty           -0.035    13.313    
+    SLICE_X42Y58         FDCE (Setup_fdce_C_CE)      -0.169    13.144    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[8]
+  -------------------------------------------------------------------
+                         required time                         13.144    
+                         arrival time                          -9.631    
+  -------------------------------------------------------------------
+                         slack                                  3.513    
+
+Slack (MET) :             3.541ns  (required time - arrival time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.500ns  (logic 2.098ns (46.621%)  route 2.402ns (53.379%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.920ns = ( 12.920 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.373ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.739     5.373    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.478     5.851 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/Q
+                         net (fo=2, routed)           0.964     6.816    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]
+    SLICE_X41Y59         LUT2 (Prop_lut2_I1_O)        0.301     7.117 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.117    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7_n_0
+    SLICE_X41Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.667 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.667    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_n_0
+    SLICE_X41Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.781 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.781    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0_n_0
+    SLICE_X41Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.895 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.895    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1_n_0
+    SLICE_X41Y62         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     8.123 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2/CO[2]
+                         net (fo=34, routed)          1.438     9.560    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2_n_1
+    SLICE_X42Y57         LUT2 (Prop_lut2_I0_O)        0.313     9.873 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[1]_i_1/O
+                         net (fo=1, routed)           0.000     9.873    Instancia_DivisorDeFrecuencia100Hz/p_1_in[1]
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     8.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     9.387 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           1.880    11.267    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.358 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.562    12.920    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[1]/C
+                         clock pessimism              0.454    13.373    
+                         clock uncertainty           -0.035    13.338    
+    SLICE_X42Y57         FDCE (Setup_fdce_C_D)        0.077    13.415    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[1]
+  -------------------------------------------------------------------
+                         required time                         13.415    
+                         arrival time                          -9.873    
+  -------------------------------------------------------------------
+                         slack                                  3.541    
+
+Slack (MET) :             3.548ns  (required time - arrival time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.497ns  (logic 2.098ns (46.652%)  route 2.399ns (53.348%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.920ns = ( 12.920 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.373ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.739     5.373    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.478     5.851 f  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/Q
+                         net (fo=2, routed)           0.964     6.816    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]
+    SLICE_X41Y59         LUT2 (Prop_lut2_I1_O)        0.301     7.117 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.117    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_i_7_n_0
+    SLICE_X41Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.667 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.667    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry_n_0
+    SLICE_X41Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.781 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.781    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__0_n_0
+    SLICE_X41Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.895 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.895    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__1_n_0
+    SLICE_X41Y62         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     8.123 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2/CO[2]
+                         net (fo=34, routed)          1.435     9.557    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta1_carry__2_n_1
+    SLICE_X42Y57         LUT2 (Prop_lut2_I0_O)        0.313     9.870 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[3]_i_1/O
+                         net (fo=1, routed)           0.000     9.870    Instancia_DivisorDeFrecuencia100Hz/p_1_in[3]
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     8.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     9.387 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           1.880    11.267    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.358 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          1.562    12.920    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/C
+                         clock pessimism              0.454    13.373    
+                         clock uncertainty           -0.035    13.338    
+    SLICE_X42Y57         FDCE (Setup_fdce_C_D)        0.081    13.419    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]
+  -------------------------------------------------------------------
+                         required time                         13.419    
+                         arrival time                          -9.870    
+  -------------------------------------------------------------------
+                         slack                                  3.548    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.489ns  (arrival time - required time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[19]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[19]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.610ns  (logic 0.383ns (62.741%)  route 0.227ns (37.259%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.981ns
+    Source Clock Delay      (SCD):    1.464ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.586     1.464    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y61         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y61         FDCE (Prop_fdce_C_Q)         0.164     1.628 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[19]/Q
+                         net (fo=3, routed)           0.061     1.689    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[19]
+    SLICE_X43Y61         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.800 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0_carry__3/O[2]
+                         net (fo=1, routed)           0.166     1.967    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0[19]
+    SLICE_X42Y61         LUT2 (Prop_lut2_I1_O)        0.108     2.075 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[19]_i_1/O
+                         net (fo=1, routed)           0.000     2.075    Instancia_DivisorDeFrecuencia100Hz/p_1_in[19]
+    SLICE_X42Y61         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.856     1.981    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y61         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[19]/C
+                         clock pessimism             -0.517     1.464    
+    SLICE_X42Y61         FDCE (Hold_fdce_C_D)         0.121     1.585    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -1.585    
+                         arrival time                           2.075    
+  -------------------------------------------------------------------
+                         slack                                  0.489    
+
+Slack (MET) :             0.489ns  (arrival time - required time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.610ns  (logic 0.383ns (62.741%)  route 0.227ns (37.259%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.982ns
+    Source Clock Delay      (SCD):    1.465ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.587     1.465    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.164     1.629 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/Q
+                         net (fo=3, routed)           0.061     1.690    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[3]
+    SLICE_X43Y57         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.801 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0_carry/O[2]
+                         net (fo=1, routed)           0.166     1.968    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0[3]
+    SLICE_X42Y57         LUT2 (Prop_lut2_I1_O)        0.108     2.076 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[3]_i_1/O
+                         net (fo=1, routed)           0.000     2.076    Instancia_DivisorDeFrecuencia100Hz/p_1_in[3]
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.857     1.982    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/C
+                         clock pessimism             -0.517     1.465    
+    SLICE_X42Y57         FDCE (Hold_fdce_C_D)         0.121     1.586    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.586    
+                         arrival time                           2.076    
+  -------------------------------------------------------------------
+                         slack                                  0.489    
+
+Slack (MET) :             0.490ns  (arrival time - required time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.611ns  (logic 0.383ns (62.735%)  route 0.228ns (37.265%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.979ns
+    Source Clock Delay      (SCD):    1.463ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.585     1.463    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y62         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y62         FDCE (Prop_fdce_C_Q)         0.164     1.627 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]/Q
+                         net (fo=2, routed)           0.061     1.688    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[23]
+    SLICE_X43Y62         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.799 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0_carry__4/O[2]
+                         net (fo=1, routed)           0.166     1.966    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0[23]
+    SLICE_X42Y62         LUT2 (Prop_lut2_I1_O)        0.108     2.074 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[23]_i_1/O
+                         net (fo=1, routed)           0.000     2.074    Instancia_DivisorDeFrecuencia100Hz/p_1_in[23]
+    SLICE_X42Y62         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.854     1.979    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y62         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]/C
+                         clock pessimism             -0.516     1.463    
+    SLICE_X42Y62         FDCE (Hold_fdce_C_D)         0.121     1.584    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]
+  -------------------------------------------------------------------
+                         required time                         -1.584    
+                         arrival time                           2.074    
+  -------------------------------------------------------------------
+                         slack                                  0.490    
+
+Slack (MET) :             0.490ns  (arrival time - required time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.611ns  (logic 0.383ns (62.735%)  route 0.228ns (37.265%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.978ns
+    Source Clock Delay      (SCD):    1.462ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.584     1.462    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y63         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y63         FDCE (Prop_fdce_C_Q)         0.164     1.626 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]/Q
+                         net (fo=2, routed)           0.061     1.687    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[27]
+    SLICE_X43Y63         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.798 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0_carry__5/O[2]
+                         net (fo=1, routed)           0.166     1.965    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0[27]
+    SLICE_X42Y63         LUT2 (Prop_lut2_I1_O)        0.108     2.073 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[27]_i_1/O
+                         net (fo=1, routed)           0.000     2.073    Instancia_DivisorDeFrecuencia100Hz/p_1_in[27]
+    SLICE_X42Y63         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.853     1.978    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y63         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]/C
+                         clock pessimism             -0.516     1.462    
+    SLICE_X42Y63         FDCE (Hold_fdce_C_D)         0.121     1.583    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]
+  -------------------------------------------------------------------
+                         required time                         -1.583    
+                         arrival time                           2.073    
+  -------------------------------------------------------------------
+                         slack                                  0.490    
+
+Slack (MET) :             0.490ns  (arrival time - required time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.611ns  (logic 0.383ns (62.735%)  route 0.228ns (37.265%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.982ns
+    Source Clock Delay      (SCD):    1.465ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.587     1.465    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y58         FDCE (Prop_fdce_C_Q)         0.164     1.629 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]/Q
+                         net (fo=3, routed)           0.061     1.690    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[7]
+    SLICE_X43Y58         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.801 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0_carry__0/O[2]
+                         net (fo=1, routed)           0.166     1.968    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0[7]
+    SLICE_X42Y58         LUT2 (Prop_lut2_I1_O)        0.108     2.076 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[7]_i_1/O
+                         net (fo=1, routed)           0.000     2.076    Instancia_DivisorDeFrecuencia100Hz/p_1_in[7]
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.857     1.982    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y58         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]/C
+                         clock pessimism             -0.517     1.465    
+    SLICE_X42Y58         FDCE (Hold_fdce_C_D)         0.121     1.586    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.586    
+                         arrival time                           2.076    
+  -------------------------------------------------------------------
+                         slack                                  0.490    
+
+Slack (MET) :             0.525ns  (arrival time - required time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[30]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[30]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.646ns  (logic 0.381ns (58.952%)  route 0.265ns (41.048%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.978ns
+    Source Clock Delay      (SCD):    1.462ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.584     1.462    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y63         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y63         FDCE (Prop_fdce_C_Q)         0.164     1.626 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[30]/Q
+                         net (fo=2, routed)           0.118     1.744    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[30]
+    SLICE_X43Y64         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.110     1.854 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0_carry__6/O[1]
+                         net (fo=1, routed)           0.147     2.001    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0[30]
+    SLICE_X42Y63         LUT2 (Prop_lut2_I1_O)        0.107     2.108 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[30]_i_1/O
+                         net (fo=1, routed)           0.000     2.108    Instancia_DivisorDeFrecuencia100Hz/p_1_in[30]
+    SLICE_X42Y63         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.853     1.978    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y63         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[30]/C
+                         clock pessimism             -0.516     1.462    
+    SLICE_X42Y63         FDCE (Hold_fdce_C_D)         0.121     1.583    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[30]
+  -------------------------------------------------------------------
+                         required time                         -1.583    
+                         arrival time                           2.108    
+  -------------------------------------------------------------------
+                         slack                                  0.525    
+
+Slack (MET) :             0.571ns  (arrival time - required time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[19]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[20]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.702ns  (logic 0.417ns (59.364%)  route 0.285ns (40.636%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.981ns
+    Source Clock Delay      (SCD):    1.464ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.586     1.464    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y61         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y61         FDCE (Prop_fdce_C_Q)         0.164     1.628 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[19]/Q
+                         net (fo=3, routed)           0.061     1.689    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[19]
+    SLICE_X43Y61         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.144     1.833 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0_carry__3/O[3]
+                         net (fo=1, routed)           0.224     2.058    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0[20]
+    SLICE_X42Y61         LUT2 (Prop_lut2_I1_O)        0.109     2.167 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[20]_i_1/O
+                         net (fo=1, routed)           0.000     2.167    Instancia_DivisorDeFrecuencia100Hz/p_1_in[20]
+    SLICE_X42Y61         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.856     1.981    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y61         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[20]/C
+                         clock pessimism             -0.517     1.464    
+    SLICE_X42Y61         FDCE (Hold_fdce_C_D)         0.131     1.595    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[20]
+  -------------------------------------------------------------------
+                         required time                         -1.595    
+                         arrival time                           2.167    
+  -------------------------------------------------------------------
+                         slack                                  0.571    
+
+Slack (MET) :             0.571ns  (arrival time - required time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.702ns  (logic 0.417ns (59.364%)  route 0.285ns (40.636%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.982ns
+    Source Clock Delay      (SCD):    1.465ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.587     1.465    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y57         FDCE (Prop_fdce_C_Q)         0.164     1.629 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[3]/Q
+                         net (fo=3, routed)           0.061     1.690    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[3]
+    SLICE_X43Y57         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.144     1.834 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0_carry/O[3]
+                         net (fo=1, routed)           0.224     2.059    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0[4]
+    SLICE_X42Y57         LUT2 (Prop_lut2_I1_O)        0.109     2.168 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[4]_i_1/O
+                         net (fo=1, routed)           0.000     2.168    Instancia_DivisorDeFrecuencia100Hz/p_1_in[4]
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.857     1.982    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y57         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]/C
+                         clock pessimism             -0.517     1.465    
+    SLICE_X42Y57         FDCE (Hold_fdce_C_D)         0.131     1.596    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.596    
+                         arrival time                           2.168    
+  -------------------------------------------------------------------
+                         slack                                  0.571    
+
+Slack (MET) :             0.572ns  (arrival time - required time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[24]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.703ns  (logic 0.417ns (59.359%)  route 0.286ns (40.641%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.979ns
+    Source Clock Delay      (SCD):    1.463ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.585     1.463    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y62         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y62         FDCE (Prop_fdce_C_Q)         0.164     1.627 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]/Q
+                         net (fo=2, routed)           0.061     1.688    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[23]
+    SLICE_X43Y62         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.144     1.832 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0_carry__4/O[3]
+                         net (fo=1, routed)           0.224     2.057    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0[24]
+    SLICE_X42Y62         LUT2 (Prop_lut2_I1_O)        0.109     2.166 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[24]_i_1/O
+                         net (fo=1, routed)           0.000     2.166    Instancia_DivisorDeFrecuencia100Hz/p_1_in[24]
+    SLICE_X42Y62         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.854     1.979    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y62         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[24]/C
+                         clock pessimism             -0.516     1.463    
+    SLICE_X42Y62         FDCE (Hold_fdce_C_D)         0.131     1.594    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[24]
+  -------------------------------------------------------------------
+                         required time                         -1.594    
+                         arrival time                           2.166    
+  -------------------------------------------------------------------
+                         slack                                  0.572    
+
+Slack (MET) :             0.572ns  (arrival time - required time)
+  Source:                 Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[28]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.703ns  (logic 0.417ns (59.359%)  route 0.286ns (40.641%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.978ns
+    Source Clock Delay      (SCD):    1.462ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.584     1.462    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y63         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y63         FDCE (Prop_fdce_C_Q)         0.164     1.626 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]/Q
+                         net (fo=2, routed)           0.061     1.687    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[27]
+    SLICE_X43Y63         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.144     1.831 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0_carry__5/O[3]
+                         net (fo=1, routed)           0.224     2.056    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta0[28]
+    SLICE_X42Y63         LUT2 (Prop_lut2_I1_O)        0.109     2.165 r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta[28]_i_1/O
+                         net (fo=1, routed)           0.000     2.165    Instancia_DivisorDeFrecuencia100Hz/p_1_in[28]
+    SLICE_X42Y63         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  Clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    Clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  Clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    Clk_125mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  Clk_125mhz_IBUF_BUFG_inst/O
+                         net (fo=34, routed)          0.853     1.978    Instancia_DivisorDeFrecuencia100Hz/CLK
+    SLICE_X42Y63         FDCE                                         r  Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[28]/C
+                         clock pessimism             -0.516     1.462    
+    SLICE_X42Y63         FDCE (Hold_fdce_C_D)         0.131     1.593    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[28]
+  -------------------------------------------------------------------
+                         required time                         -1.593    
+                         arrival time                           2.165    
+  -------------------------------------------------------------------
+                         slack                                  0.572    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { Clk_125mhz }
+
+Check Type        Corner  Lib Pin    Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     XADC/DCLK  n/a            4.000         8.000       4.000      XADC_X0Y0       Instancia_XADC/XADC_inst/DCLK
+Min Period        n/a     BUFG/I     n/a            2.155         8.000       5.845      BUFGCTRL_X0Y16  Clk_125mhz_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C     n/a            1.000         8.000       7.000      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[0]/C
+Min Period        n/a     FDCE/C     n/a            1.000         8.000       7.000      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[10]/C
+Min Period        n/a     FDCE/C     n/a            1.000         8.000       7.000      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[11]/C
+Min Period        n/a     FDCE/C     n/a            1.000         8.000       7.000      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[12]/C
+Min Period        n/a     FDCE/C     n/a            1.000         8.000       7.000      SLICE_X42Y60    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[13]/C
+Min Period        n/a     FDCE/C     n/a            1.000         8.000       7.000      SLICE_X42Y60    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[14]/C
+Min Period        n/a     FDCE/C     n/a            1.000         8.000       7.000      SLICE_X42Y60    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[15]/C
+Min Period        n/a     FDCE/C     n/a            1.000         8.000       7.000      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[16]/C
+Low Pulse Width   Slow    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[0]/C
+Low Pulse Width   Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[0]/C
+Low Pulse Width   Slow    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[10]/C
+Low Pulse Width   Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[10]/C
+Low Pulse Width   Slow    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[11]/C
+Low Pulse Width   Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[11]/C
+Low Pulse Width   Slow    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[12]/C
+Low Pulse Width   Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y59    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[12]/C
+Low Pulse Width   Slow    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y60    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[13]/C
+Low Pulse Width   Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y60    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[13]/C
+High Pulse Width  Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y62    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[22]/C
+High Pulse Width  Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y62    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[23]/C
+High Pulse Width  Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y62    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[24]/C
+High Pulse Width  Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y62    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[25]/C
+High Pulse Width  Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y63    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[26]/C
+High Pulse Width  Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y63    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[27]/C
+High Pulse Width  Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y63    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[28]/C
+High Pulse Width  Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y63    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[29]/C
+High Pulse Width  Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y63    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[30]/C
+High Pulse Width  Fast    FDCE/C     n/a            0.500         4.000       3.500      SLICE_X42Y63    Instancia_DivisorDeFrecuencia100Hz/Temp_Cuenta_reg[31]/C
+
+
+
